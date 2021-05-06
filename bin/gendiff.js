@@ -1,13 +1,17 @@
 #!/usr/bin/env node
+import program from 'commander';
+import compare from '../src/index.js';
 
-const programm = require('commander');
+program.usage('[options] <filepath1> <filepath2>');
 
-programm.version('1.0.0')
+program.version('1.0.0')
+  .option('-f, --format [type]', 'output format')
   .description('Compares two configuration files and shows a difference.');
 
-programm.usage('[options] <filepath1> <filepath2>')
+program
   .arguments('<filepath1> <filepath2>')
-  .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'output format');
+  .action((filepath1, filepath2) => {
+    console.log(compare(filepath1, filepath2));
+  });
 
-programm.parse(process.argv);
+program.parse(process.argv);

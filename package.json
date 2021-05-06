@@ -2,7 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/pashhha/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/pashhha/frontend-project-lvl2/actions)",
-  "main": "index.js",
+  "main": "gendiff.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,11 +21,14 @@
   },
   "homepage": "https://github.com/pashhha/frontend-project-lvl2#readme",
   "dependencies": {
-    "commander": "^7.2.0"
+    "commander": "^7.2.0",
+    "file-system": "^2.2.2"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "lodash": "^4.17.21",
+    "prettier": "^2.2.1"
   }
 }
